@@ -1,0 +1,74 @@
+git init (create Repository)
+
+git init [project name]
+
+.gitignore (in this file write all files that should not be tracked by git)
+
+git commit -a -m "message"  || git add . -> git commit -m "message"
+
+git log || git log --oneline (do the same, the second one is more compact)
+
+git reset HEAD <path/to/file> (unstaged the file)
+
+git checkout <path/to/file> (les modifs ne seront pas pris en compte)
+
+git checkout HEAD^ <path/to/file> (reset the file when already commited)
+
+git reset --hard HEAD^ (reset the file if it was deleted)
+
+git checkout commit-Id || git checkout branch_name || git checkout HEAD~1 (partir sur la branche donnee)
+
+git checkout -b new_branch (cree une nouvelle branche a partir de la branche actuelle et aller sur celle-ci) ||
+git branch new_branch (cree une nouvelle branche a partir de la branche actuelle)
+
+git diff commit-Id1 commit-Id2
+
+git branch (list of branches)
+
+git branch -D branch_name (delete a branch)
+
+git branch -m <oldname> <newname> (If you want to rename a branch while pointed to any branch)
+
+git branch -m <newname> (If you want to rename the current branch)
+
+git merge branch (merge the history from branch into the current branch)
+
+<<<<<<<<HEAD    {Head of branch
+========
+>>>>>>>>Branch   from branch}
+
+git remote (list all remote repositories associated with the current repository.)
+
+git clone remote_repo [new_repo] (create a new repository that is a clone of a remote repository.)
+
+git remote add repo_name PathToRemoteRepo (add a new remote repository to the current repository.)
+
+git push [repo_name branch_name] (push your latest changes to a remote repository.)
+
+git pull [repo_name branch_name] (pull the latest changes from a remote repository to your repository.)
+
+sudo apt-get install git-flow
+
+git flow init
+
+git flow feature start feature_name
+
+git flow feature finish feature_name
+
+git flow hotfix start bug_name
+
+git flow hotfix finish bug_name
+
+git stash (save your changes without commiting them)
+
+git stash apply (restore your uncommited changes in the branch you are working on)
+
+git stash list (list of stashes)
+
+git stash apply stash@{number} (retrieve changes from a specific stash)
+
+git config --global color.ui true
+
+git config --global user.name <your_name>
+
+git config --global user.email <your_email>
